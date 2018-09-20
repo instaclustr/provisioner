@@ -1,0 +1,34 @@
+{
+    "clusterName": "@@NAME@@",
+    "bundles": [
+        {
+            "bundle": "@@BUNDLE@@",
+            "version": "@@VERSION@@",
+            "options": {
+                "clientEncryption": "false"
+            }
+        }
+    ],
+    "provider": {
+        "name": "AWS_VPC",
+        "accountName": null
+    },
+    "nodeSize": "@@SIZE@@",
+    "dataCentre": "@@DATACENTRE@@",
+    "clusterNetwork" : "192.168.0.0/18",
+    "privateNetworkCluster": "false",
+    "rackAllocation": {
+        "numberOfRacks": "3",
+        "nodesPerRack": "@@NODESPERRACK@@"
+    },
+    "firewallRules": [
+        {
+            "network": "@@EXTERNALIP@@/32",
+            "rules": [
+                {
+                    "type": "@@RULE_TYPE@@"
+                }
+            ]
+        }
+    ]
+}
